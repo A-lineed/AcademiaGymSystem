@@ -37,7 +37,7 @@ public class AcessoController {
 	@PostMapping("/login")
 	public String loginGerente(Gerente gerente, RedirectAttributes ra, HttpSession session) {
 		if (gerente.getEmail().equals("admin")&&
-			gerente.getChaveAcesso().equals("1234")) {
+			gerente.getChaveAcesso().equals("adm123")) {
 			return"tela_gerente";
 		}else {
 			ra.addFlashAttribute("mensagem","Você Não possui permissão para esta Área!");
